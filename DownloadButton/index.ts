@@ -53,7 +53,7 @@ export class DownloadButton implements ComponentFramework.StandardControl<IInput
 		console.log(dataUri);
 		this._a.href = dataUri;
 		this._a.download = this._context.parameters.fileName.raw || "";
-
+		let testvar = 'test';
 	}
 
 	/**
