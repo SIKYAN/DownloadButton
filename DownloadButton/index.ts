@@ -49,7 +49,7 @@ export class DownloadButton implements ComponentFramework.StandardControl<IInput
 	public updateView(context: ComponentFramework.Context<IInputs>): void
 	{
 		// Add code to update control view
-		let dataUri = this._context.parameters.fileContent.raw?.startsWith ? this._context.parameters.fileContent.raw : 'data:${this._context.parameters.fileMIMEType.raw};base64,${this._context.parameters.fileContent.raw}';
+		let dataUri = this._context.parameters.fileContent.raw?.startsWith('data:') ? this._context.parameters.fileContent.raw : 'data:${this._context.parameters.fileMIMEType.raw};base64,${this._context.parameters.fileContent.raw}';
 		console.log(dataUri);
 		this._a.href = dataUri;
 		this._a.download = this._context.parameters.fileName.raw || "";
